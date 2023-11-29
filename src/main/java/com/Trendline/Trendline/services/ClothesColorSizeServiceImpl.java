@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public class ClothesColoeSizeServiceImpl extends GenericServiceImpl<ClothesColorSize>  {
+public class ClothesColorSizeServiceImpl extends GenericServiceImpl<ClothesColorSize>  {
     @Autowired
-    public ClothesColoeSizeServiceImpl(JpaRepository<ClothesColorSize, Integer> repository) {
+    public ClothesColorSizeServiceImpl(JpaRepository<ClothesColorSize, Integer> repository) {
         super(repository);
     }
 
