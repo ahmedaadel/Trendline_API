@@ -10,9 +10,10 @@ public class Color {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
 
-    @Column(name = "colorCode")
+    @Column(name = "color_code")
     private String colorCode ;
 
+    Color(){}
     public Color(String colorCode) {
         this.colorCode = colorCode;
     }

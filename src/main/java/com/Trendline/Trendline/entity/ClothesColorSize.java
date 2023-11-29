@@ -14,12 +14,13 @@ public class ClothesColorSize {
     @Column(name = "clothesId")
     private int clothesId;
 
-    @Column(name = "sizeId")
+    @Column(name = "size_id")
     private int sizeId;
 
-    @Column(name = "colorId")
+    @Column(name = "color_id")
     private int colorId;
 
+    ClothesColorSize(){}
     public ClothesColorSize(int clothesId, int sizeId, int colorId) {
         this.clothesId = clothesId;
         this.sizeId = sizeId;

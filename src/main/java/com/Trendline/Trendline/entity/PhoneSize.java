@@ -12,14 +12,15 @@ public class PhoneSize {
     private int id;
 
 
-    @Column(name = "phoneId")
+    @Column(name = "phone_id")
     private int phoneId;
 
 
-    @Column(name = "sizeId")
+    @Column(name = "size_id")
     private int sizeId;
 
 
+    PhoneSize(){}
     public PhoneSize(int id, int phoneId, int sizeId) {
         this.id = id;
         this.phoneId = phoneId;

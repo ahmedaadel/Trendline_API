@@ -25,15 +25,16 @@ public class Phone {
     @Column(name = "price")
     private double price ;
 
-    @Column(name = "offeredPrice")
+    @Column(name = "offered_price")
     private double offeredPrice ;
 
-    @Column(name = "isAvailable")
+    @Column(name = "is_available")
     private boolean isAvailable ;
 
     @Column(name = "image")
     private byte[] image ;
 
+    Phone(){}
     public Phone(String name, String brand, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
         this.name = name;
         this.brand = brand;

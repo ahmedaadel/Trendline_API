@@ -30,16 +30,17 @@ public class BeautyProduct {
     @Column(name = "price")
     private double price ;
 
-    @Column(name = "offeredPrice")
+    @Column(name = "offered_price")
     private double offeredPrice ;
 
-    @Column(name = "isAvailable")
+    @Column(name = "is_available")
     private boolean isAvailable ;
 
     @Column(name = "image")
     private byte[] image ;
 
 
+    BeautyProduct(){}
     @Override
     public String toString() {
         return "beauty_product{" +

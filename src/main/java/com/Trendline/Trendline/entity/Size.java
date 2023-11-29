@@ -14,11 +14,13 @@ public class Size {
     @Column(name = "size")
     private String size ;
 
+    Size(){}
     public Size(String size) {
         this.size = size;
     }
 
     public int getId() {
+
         return id;
     }
 

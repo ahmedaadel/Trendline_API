@@ -26,16 +26,17 @@ public class ElectronicDevice {
     @Column(name = "description")
     private String description ;
 
-    @Column(name = "offeredPrice")
+    @Column(name = "offered_price")
     private double offeredPrice ;
 
-    @Column(name = "isAvailable")
-    private boolean isAvailable ;
+    @Column(name = "is_available")
+    private int isAvailable ;
 
     @Column(name = "image")
     private byte[] image ;
 
-    public ElectronicDevice(String name, double price, String type, String description, double offeredPrice, boolean isAvailable, byte[] image) {
+    ElectronicDevice(){}
+    public ElectronicDevice(String name, double price, String type, String description, double offeredPrice, int isAvailable, byte[] image) {
         this.name = name;
         this.price = price;
         this.type = type;
@@ -107,11 +108,11 @@ public class ElectronicDevice {
         this.offeredPrice = offeredPrice;
     }
 
-    public boolean isAvailable() {
+    public int isAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(int available) {
         isAvailable = available;
     }
 

@@ -25,15 +25,16 @@ public class Clothes {
     @Column(name = "price")
     private double price ;
 
-@Column(name = "offeredPrice")
+@Column(name = "offered_price")
     private double offeredPrice ;
 
-@Column(name = "isAvailable")
+@Column(name = "is_available")
     private boolean isAvailable ;
 
 @Column(name = "image")
     private byte[] image ;
 
+    Clothes(){}
     public Clothes(String type, String category, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
         this.type = type;
         this.category = category;
