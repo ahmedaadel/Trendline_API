@@ -34,6 +34,7 @@ public class Phone {
         @Column(name = "image")
         private byte[] image ;
 
+
         Phone(){}
     public Phone(String name, String brand, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
         this.name = name;

@@ -11,11 +11,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/phoneColor")
-public class PhoneSizeRestController {
+public class PhoneColorRestController {
 
     PhoneColorServiceImpl entityManager;
 
-    PhoneSizeRestController(PhoneColorServiceImpl manager)
+    PhoneColorRestController(PhoneColorServiceImpl manager)
     {
         entityManager = manager;
     }
