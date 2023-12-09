@@ -1,6 +1,5 @@
 package com.Trendline.Trendline.rest;
 
-import com.Trendline.Trendline.entity.Accessory;
 import com.Trendline.Trendline.entity.Admin;
 import com.Trendline.Trendline.services.admin.AdminServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController
 @RequestMapping("/admins")
 
 public class AdminRestController {

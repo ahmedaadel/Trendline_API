@@ -1,6 +1,5 @@
 package com.Trendline.Trendline.rest;
 
-import com.Trendline.Trendline.entity.Phone;
 import com.Trendline.Trendline.entity.Size;
 import com.Trendline.Trendline.services.SizeServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController
 @RequestMapping("/sizes")
 public class SizeRestController {
 

@@ -1,14 +1,12 @@
 package com.Trendline.Trendline.rest;
 
-import com.Trendline.Trendline.entity.Accessory;
 import com.Trendline.Trendline.entity.Clothes;
-import com.Trendline.Trendline.services.AccessoryServiceImpl;
 import com.Trendline.Trendline.services.ClothesServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+
 @RequestMapping("/clothes")
 public class ClothesRestController {
     ClothesServiceImpl entityManager;

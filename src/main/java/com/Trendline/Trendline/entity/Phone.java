@@ -8,33 +8,33 @@ import java.util.Arrays;
 @Table(name = "phone")
 public class Phone {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+        @Id
+        @Column(name = "id")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private int id;
 
-    @Column(name = "name")
-    private String name ;
+        @Column(name = "name")
+        private String name ;
 
-    @Column(name = "brand")
-    private String brand ;
+        @Column(name = "brand")
+        private String brand ;
 
-    @Column(name = "description")
-    private String description ;
+        @Column(name = "description")
+        private String description ;
 
-    @Column(name = "price")
-    private double price ;
+        @Column(name = "price")
+        private double price ;
 
-    @Column(name = "offered_price")
-    private double offeredPrice ;
+        @Column(name = "offered_price")
+        private double offeredPrice ;
 
-    @Column(name = "is_available")
-    private boolean isAvailable ;
+        @Column(name = "is_available")
+        private boolean isAvailable ;
 
-    @Column(name = "image")
-    private byte[] image ;
+        @Column(name = "image")
+        private byte[] image ;
 
-    Phone(){}
+        Phone(){}
     public Phone(String name, String brand, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
         this.name = name;
         this.brand = brand;

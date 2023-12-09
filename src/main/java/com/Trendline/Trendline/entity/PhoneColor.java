@@ -4,8 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "phone_size")
-public class PhoneSize {
+@Table(name = "phone_color")
+public class PhoneColor {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,15 +16,15 @@ public class PhoneSize {
     private int phoneId;
 
 
-    @Column(name = "size_id")
-    private int sizeId;
+    @Column(name = "color_id")
+    private int coloeId;
 
 
-    PhoneSize(){}
-    public PhoneSize(int id, int phoneId, int sizeId) {
+    PhoneColor(){}
+    public PhoneColor(int id, int phoneId, int coloeId) {
         this.id = id;
         this.phoneId = phoneId;
-        this.sizeId = sizeId;
+        this.coloeId = coloeId;
     }
 
     public int getId() {
@@ -44,11 +44,11 @@ public class PhoneSize {
     }
 
     public int getSizeId() {
-        return sizeId;
+        return coloeId;
     }
 
     public void setSizeId(int sizeId) {
-        this.sizeId = sizeId;
+        this.coloeId = sizeId;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class PhoneSize {
         return "phone_size{" +
                 "id=" + id +
                 ", phoneId=" + phoneId +
-                ", sizeId=" + sizeId +
+                ", sizeId=" + coloeId +
                 '}';
     }
 }

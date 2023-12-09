@@ -1,6 +1,5 @@
 package com.Trendline.Trendline.rest;
 
-import com.Trendline.Trendline.entity.Clothes;
 import com.Trendline.Trendline.entity.Color;
 import com.Trendline.Trendline.services.ColorServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController
 @RequestMapping("/colors")
 public class ColorRestController {
 

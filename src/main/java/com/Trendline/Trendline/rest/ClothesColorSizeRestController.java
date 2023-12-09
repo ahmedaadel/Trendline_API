@@ -2,13 +2,11 @@ package com.Trendline.Trendline.rest;
 
 
 import com.Trendline.Trendline.entity.ClothesColorSize;
-import com.Trendline.Trendline.entity.Size;
 import com.Trendline.Trendline.services.ClothesColorSizeServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
 @RequestMapping("/clothesColorSize")
 public class ClothesColorSizeRestController {
 

@@ -1,15 +1,12 @@
 package com.Trendline.Trendline.rest;
 
 
-import com.Trendline.Trendline.entity.Size;
 import com.Trendline.Trendline.entity.WomenAccessory;
-import com.Trendline.Trendline.services.SizeServiceImpl;
 import com.Trendline.Trendline.services.WomenAccessoryServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
 @RequestMapping("/womenAccessories")
 public class WomenAccessoryRestController {
 
