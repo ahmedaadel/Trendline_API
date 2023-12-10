@@ -46,4 +46,9 @@ public class ColorRestController {
         entityManager.deleteItem(id);
     }
 
+    @GetMapping("/codes")
+    List<String> getColorCodesByColorIds(@RequestParam List<Integer> colorIds) {
+        return entityManager.getColorCodesByColorIds(colorIds);
+    }
+
 }

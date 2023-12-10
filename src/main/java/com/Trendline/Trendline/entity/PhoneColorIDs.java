@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "phone_color")
-public class PhoneColor {
+public class PhoneColorIDs {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,14 +17,14 @@ public class PhoneColor {
 
 
     @Column(name = "color_id")
-    private int coloeId;
+    private int colorId;
 
 
-    PhoneColor(){}
-    public PhoneColor(int id, int phoneId, int coloeId) {
+    PhoneColorIDs(){}
+    public PhoneColorIDs(int id, int phoneId, int colorId) {
         this.id = id;
         this.phoneId = phoneId;
-        this.coloeId = coloeId;
+        this.colorId = colorId;
     }
 
     public int getId() {
@@ -43,12 +43,12 @@ public class PhoneColor {
         this.phoneId = phoneId;
     }
 
-    public int getSizeId() {
-        return coloeId;
+    public int getColorId() {
+        return colorId;
     }
 
-    public void setSizeId(int sizeId) {
-        this.coloeId = sizeId;
+    public void setColorId(int sizeId) {
+        this.colorId = sizeId;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class PhoneColor {
         return "phone_size{" +
                 "id=" + id +
                 ", phoneId=" + phoneId +
-                ", sizeId=" + coloeId +
+                ", sizeId=" + colorId +
                 '}';
     }
 }
