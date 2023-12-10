@@ -2,17 +2,19 @@ package com.Trendline.Trendline.rest;
 
 import com.Trendline.Trendline.entity.Size;
 import com.Trendline.Trendline.services.SizeServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
+@RestController
 @RequestMapping("/sizes")
 public class SizeRestController {
 
 
     SizeServiceImpl entityManager;
 
+    @Autowired
     SizeRestController(SizeServiceImpl manager)
     {
         entityManager = manager;
