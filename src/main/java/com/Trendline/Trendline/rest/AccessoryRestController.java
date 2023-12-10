@@ -2,17 +2,20 @@ package com.Trendline.Trendline.rest;
 
 import com.Trendline.Trendline.entity.Accessory;
 import com.Trendline.Trendline.services.AccessoryServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 
+@RestController
 @RequestMapping("/accessories")
 
 public class AccessoryRestController {
     AccessoryServiceImpl entityManager;
 
+    @Autowired
     AccessoryRestController(AccessoryServiceImpl manager)
     {
         entityManager = manager;
@@ -20,8 +23,8 @@ public class AccessoryRestController {
 
     @PostMapping("")
     Accessory addNewAccessory(@RequestBody Accessory accessory){
-        Accessory accessory1 = entityManager.saveItem(accessory);
-        return  accessory1 ;
+
+        return  entityManager.saveItem(accessory);
     }
       @PutMapping("")
     void updateAccessory(@RequestBody Accessory accessory){
@@ -32,14 +35,13 @@ public class AccessoryRestController {
     @GetMapping("")
     List<Accessory> getAllAccessories()
     {
-        List<Accessory> accessoryList =  entityManager.findAll();
-        return accessoryList ;
+
+        return entityManager.findAll();
     }
     @GetMapping("/{id}")
     Accessory getSingleAccessories(@PathVariable(name = "id") int id )
     {
-        Accessory accessoryList =  entityManager.findById(id);
-        return accessoryList ;
+        return   entityManager.findById(id);
     }
 
     @DeleteMapping("/{id}")

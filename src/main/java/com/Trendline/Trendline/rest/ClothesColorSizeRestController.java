@@ -1,17 +1,19 @@
 package com.Trendline.Trendline.rest;
 
-
 import com.Trendline.Trendline.entity.ClothesColorSize;
 import com.Trendline.Trendline.services.ClothesColorSizeServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 @RequestMapping("/clothesColorSize")
 public class ClothesColorSizeRestController {
 
     ClothesColorSizeServiceImpl entityManager;
 
+    @Autowired
     ClothesColorSizeRestController(ClothesColorSizeServiceImpl manager)
     {
         entityManager = manager;
@@ -31,6 +33,16 @@ public class ClothesColorSizeRestController {
     List<ClothesColorSize> getAllClothesColorSize()
     {
         return  entityManager.findAll();
+    }
+    @GetMapping("/colors/{clothesId}")
+    List<String> getAllClothesColors(@PathVariable(name = "clothesId" ) int clothesId)
+    {
+        return  entityManager.getColorCodesByClothesId(clothesId);
+    }
+    @GetMapping("/sizes/{clothesId}")
+    List<String> getAllClothesSizes(@PathVariable(name = "clothesId" ) int clothesId)
+    {
+        return  entityManager.getSizesByClothesId(clothesId);
     }
     @GetMapping("/{id}")
     ClothesColorSize getSingleClothesColorSize(@PathVariable(name = "id") int id )

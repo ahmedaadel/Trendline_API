@@ -11,7 +11,7 @@ public class ClothesColorSize {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "clothesId")
+    @Column(name = "clothes_id")
     private int clothesId;
 
     @Column(name = "size_id")

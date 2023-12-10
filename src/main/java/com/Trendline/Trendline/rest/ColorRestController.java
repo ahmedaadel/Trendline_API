@@ -2,16 +2,18 @@ package com.Trendline.Trendline.rest;
 
 import com.Trendline.Trendline.entity.Color;
 import com.Trendline.Trendline.services.ColorServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 
 @RequestMapping("/colors")
 public class ColorRestController {
 
     ColorServiceImpl entityManager;
-
+    @Autowired
     ColorRestController(ColorServiceImpl manager)
     {
         entityManager = manager;
@@ -19,8 +21,7 @@ public class ColorRestController {
 
     @PostMapping("")
     Color addNewColor(@RequestBody Color color){
-        Color color1 = entityManager.saveItem(color);
-        return  color1 ;
+        return  entityManager.saveItem(color);
     }
     @PutMapping("")
     void updateColor(@RequestBody Color color){
@@ -31,14 +32,12 @@ public class ColorRestController {
     @GetMapping("")
     List<Color> getAllColor()
     {
-        List<Color> ColorList =  entityManager.findAll();
-        return ColorList ;
+        return entityManager.findAll();
     }
     @GetMapping("/{id}")
     Color getSingleColor(@PathVariable(name = "id") int id )
     {
-        Color colorList =  entityManager.findById(id);
-        return colorList ;
+        return entityManager.findById(id);
     }
 
     @DeleteMapping("/{id}")

@@ -2,14 +2,16 @@ package com.Trendline.Trendline.rest;
 
 import com.Trendline.Trendline.entity.BeautyProduct;
 import com.Trendline.Trendline.services.BeautyServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+@RestController
 
 @RequestMapping("/beauty")
 public class BeautyRestController {
     BeautyServiceImpl entityManager;
-
+    @Autowired
     BeautyRestController(BeautyServiceImpl manager)
     {
         entityManager = manager;
@@ -17,8 +19,7 @@ public class BeautyRestController {
 
     @PostMapping("")
     BeautyProduct addNewBeautyProduct(@RequestBody  BeautyProduct beautyProduct){
-        BeautyProduct beautyProduct1 = entityManager.saveItem(beautyProduct);
-        return  beautyProduct1 ;
+        return  entityManager.saveItem(beautyProduct);
     }
 
     @PutMapping("")
@@ -30,14 +31,13 @@ public class BeautyRestController {
     @GetMapping("")
     List<BeautyProduct> getAllAcBeauty()
     {
-        List<BeautyProduct> BeautyList =  entityManager.findAll();
-        return BeautyList ;
+
+        return entityManager.findAll();
     }
     @GetMapping("/{id}")
     BeautyProduct getSingleAcBeauty(@PathVariable(name = "id") int id )
     {
-        BeautyProduct BeautyList =  entityManager.findById(id);
-        return BeautyList ;
+        return entityManager.findById(id);
     }
 
     @DeleteMapping("/{id}")

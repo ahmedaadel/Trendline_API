@@ -3,14 +3,17 @@ package com.Trendline.Trendline.rest;
 
 import com.Trendline.Trendline.entity.ElectronicDevice;
 import com.Trendline.Trendline.services.ElectronicDevicesServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 @RequestMapping("/electronics")
 public class ElectronicRestController {
     ElectronicDevicesServiceImpl entityManager;
 
+    @Autowired
     ElectronicRestController(ElectronicDevicesServiceImpl manager)
     {
         entityManager = manager;
@@ -18,8 +21,8 @@ public class ElectronicRestController {
 
     @PostMapping("")
     ElectronicDevice addNewClothes(@RequestBody ElectronicDevice electronicDevice){
-        ElectronicDevice electronicDevice1 = entityManager.saveItem(electronicDevice);
-        return  electronicDevice1 ;
+
+        return  entityManager.saveItem(electronicDevice);
     }
     @PutMapping("")
     void updateElectronicDevices(@RequestBody ElectronicDevice electronicDevice){
@@ -30,14 +33,14 @@ public class ElectronicRestController {
     @GetMapping("")
     List<ElectronicDevice> getAllElectronicDevices()
     {
-        List<ElectronicDevice> electronicDeviceList =  entityManager.findAll();
-        return electronicDeviceList ;
+
+        return  entityManager.findAll();
     }
     @GetMapping("/{id}")
     ElectronicDevice getSingleClothes(@PathVariable(name = "id") int id )
     {
-        ElectronicDevice electronicDevice =  entityManager.findById(id);
-        return electronicDevice ;
+
+        return entityManager.findById(id);
     }
 
     @DeleteMapping("/{id}")
