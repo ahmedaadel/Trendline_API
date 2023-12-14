@@ -29,20 +29,41 @@ public class Clothes {
     private double offeredPrice ;
 
 @Column(name = "is_available")
-    private boolean isAvailable ;
+    private int isAvailable ;
 
+    @Column(name = "is_top_sale")
+    private int isTopSale ;
 @Column(name = "image")
     private byte[] image ;
 
     Clothes(){}
-    public Clothes(String type, String category, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
+
+    public Clothes(int id, String type, String category, String description, double price, double offeredPrice, int isAvailable, int isTopSale, byte[] image) {
+        this.id = id;
         this.type = type;
         this.category = category;
         this.description = description;
         this.price = price;
         this.offeredPrice = offeredPrice;
         this.isAvailable = isAvailable;
+        this.isTopSale = isTopSale;
         this.image = image;
+    }
+
+    public int getIsAvailable() {
+        return isAvailable;
+    }
+
+    public void setIsAvailable(int isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
+    public int getIsTopSale() {
+        return isTopSale;
+    }
+
+    public void setIsTopSale(int isTopSale) {
+        this.isTopSale = isTopSale;
     }
 
     @Override
@@ -107,11 +128,11 @@ public class Clothes {
         this.offeredPrice = offeredPrice;
     }
 
-    public boolean isAvailable() {
+    public int isAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(int available) {
         isAvailable = available;
     }
 
@@ -122,4 +143,5 @@ public class Clothes {
     public void setImage(byte[] image) {
         this.image = image;
     }
+
 }

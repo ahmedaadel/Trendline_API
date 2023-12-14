@@ -29,14 +29,17 @@ public class Phone {
         private double offeredPrice ;
 
         @Column(name = "is_available")
-        private boolean isAvailable ;
+        private int isAvailable ;
 
         @Column(name = "image")
         private byte[] image ;
 
-
+    @Column(name = "is_top_sale")
+    private int isTopSale ;
         Phone(){}
-    public Phone(String name, String brand, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
+
+    public Phone(int id, String name, String brand, String description, double price, double offeredPrice, int isAvailable, byte[] image, int isTopSale) {
+        this.id = id;
         this.name = name;
         this.brand = brand;
         this.description = description;
@@ -44,6 +47,15 @@ public class Phone {
         this.offeredPrice = offeredPrice;
         this.isAvailable = isAvailable;
         this.image = image;
+        this.isTopSale = isTopSale;
+    }
+
+    public int getIsTopSale() {
+        return isTopSale;
+    }
+
+    public void setIsTopSale(int isTopSale) {
+        this.isTopSale = isTopSale;
     }
 
     public int getId() {
@@ -94,11 +106,11 @@ public class Phone {
         this.offeredPrice = offeredPrice;
     }
 
-    public boolean isAvailable() {
+    public int isAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(int available) {
         isAvailable = available;
     }
 

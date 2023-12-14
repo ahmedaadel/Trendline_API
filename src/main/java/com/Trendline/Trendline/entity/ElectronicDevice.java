@@ -32,17 +32,39 @@ public class ElectronicDevice {
     @Column(name = "is_available")
     private int isAvailable ;
 
+    @Column(name = "is_top_sale")
+    private int isTopSale ;
+
+    public int getIsAvailable() {
+        return isAvailable;
+    }
+
+    public void setIsAvailable(int isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
+    public int getIsTopSale() {
+        return isTopSale;
+    }
+
+    public void setIsTopSale(int isTopSale) {
+        this.isTopSale = isTopSale;
+    }
+
     @Column(name = "image")
     private byte[] image ;
 
     ElectronicDevice(){}
-    public ElectronicDevice(String name, double price, String type, String description, double offeredPrice, int isAvailable, byte[] image) {
+
+    public ElectronicDevice(int id, String name, double price, String type, String description, double offeredPrice, int isAvailable, int isTopSale, byte[] image) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.type = type;
         this.description = description;
         this.offeredPrice = offeredPrice;
         this.isAvailable = isAvailable;
+        this.isTopSale = isTopSale;
         this.image = image;
     }
 

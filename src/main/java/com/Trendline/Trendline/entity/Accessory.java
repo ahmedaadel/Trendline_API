@@ -35,6 +35,8 @@ public class Accessory {
     @Column(name = "is_available")
     private int isAvailable ;
 
+    @Column(name = "is_top_sale")
+    private int isTopSale ;
     @Column(name = "image")
     private byte[] image ;
 

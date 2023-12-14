@@ -15,32 +15,37 @@ public class BeautyProduct {
     private int id;
 
     @Column(name = "name")
-    private String name ;
+    private String name;
 
     @Column(name = "type")
-    private String type ;
+    private String type;
 
 
     @Column(name = "brand")
-    private String brand ;
+    private String brand;
 
     @Column(name = "description")
-    private String description ;
+    private String description;
 
     @Column(name = "price")
-    private double price ;
+    private double price;
 
     @Column(name = "offered_price")
-    private double offeredPrice ;
+    private double offeredPrice;
 
     @Column(name = "is_available")
-    private boolean isAvailable ;
+    private int isAvailable;
 
     @Column(name = "image")
-    private byte[] image ;
+    private byte[] image;
 
 
-    BeautyProduct(){}
+    @Column(name = "is_top_sale")
+    private int isTopSale;
+
+    BeautyProduct() {
+    }
+
     @Override
     public String toString() {
         return "beauty_product{" +
@@ -104,11 +109,11 @@ public class BeautyProduct {
         this.offeredPrice = offeredPrice;
     }
 
-    public boolean isAvailable() {
+    public int isAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(int available) {
         isAvailable = available;
     }
 
@@ -120,7 +125,8 @@ public class BeautyProduct {
         this.image = image;
     }
 
-    public BeautyProduct(String name, String type, String brand, String description, double price, double offeredPrice, boolean isAvailable, byte[] image) {
+    public BeautyProduct(int id, String name, String type, String brand, String description, double price, double offeredPrice, int isAvailable, byte[] image, int isTopSale) {
+        this.id = id;
         this.name = name;
         this.type = type;
         this.brand = brand;
@@ -129,5 +135,6 @@ public class BeautyProduct {
         this.offeredPrice = offeredPrice;
         this.isAvailable = isAvailable;
         this.image = image;
+        this.isTopSale = isTopSale;
     }
 }
