@@ -1,7 +1,6 @@
-spring.datasource.url=jdbc:mysql://root:dE22-g5B3-AagF3gEB1-GcHFdfdgHbdE@monorail.proxy.rlwy.net:20212/railway
-
-spring.datasource.username=root
-spring.datasource.password=dE22-g5B3-AagF3gEB1-GcHFdfdgHbdE
+spring.datasource.url=jdbc:mysql://localhost:3306/trendline
+spring.datasource.username=dawly
+spring.datasource.password=115239
 
 spring.main.banner-mode=off 
 
